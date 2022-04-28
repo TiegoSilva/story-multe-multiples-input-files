@@ -41,7 +41,7 @@ let storage = multer.diskStorage(
 
 
 const upload = multer({storage: storage})
-const cpUpload = upload.fields([{name: 'comprovante_residencia'}, {name: 'id_cnh'}])
+const cpUpload = upload.fields([{name: 'file1'}, {name: 'file2'}])
 
 
 app.post('/uploadfiles', cpUpload, async (req, res, next) => { 
